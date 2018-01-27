@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Students' information</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @homework_twos.each do |homework_two| %>
+      <tr>
+        <td><%= homework_two.name %></td>
+        <td><%= homework_two.email %></td>
+        <td><%= link_to 'Show', homework_two %></td>
+        <td><%= link_to 'Edit', edit_homework_two_path(homework_two) %></td>
+        <td><%= link_to 'Destroy', homework_two, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Click here to add information', new_homework_two_path %>

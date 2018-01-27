@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @homework_two.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @homework_two.email %>
+</p>
+
+<%= link_to 'Edit', edit_homework_two_path(@homework_two) %> |
+<%= link_to 'Back', homework_twos_path %>
